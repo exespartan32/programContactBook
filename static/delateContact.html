@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="mensajes/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mensajes/bootstrap5/css/product.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14ae2edc61.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000  ">
+                <abbr title="home"><i class="fa-solid fa-house-user fa-3x"></i></abbr>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/createContactBook">
+                <i class="fa-solid fa-book"></i>Create Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/addContact">
+                <i class="fa-solid fa-address-book"></i>Add Contact
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectCB">
+                <i class="fa-solid fa-book-open"></i>List Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectDelate">
+                <i class="fa-solid fa-trash"></i>Delete Contact
+            </a>
+        </nav>
+    </header>
+    <form action="http://localhost:3000/delateContact" method="post">
+        <div class="bd-example">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr table-dark>
+                        <th scope="col">select</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">TopList</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla">
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+</body>
+
+</html>

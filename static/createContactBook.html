@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mensajes/bootstrap5/css/estilos.css">
+    <link href="mensajes/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mensajes/bootstrap5/css/product.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14ae2edc61.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000  ">
+                <abbr title="home"><i class="fa-solid fa-house-user fa-3x"></i></abbr>
+              </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/createContactBook">
+                <i class="fa-solid fa-book"></i>Create Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/addContact">
+                <i class="fa-solid fa-address-book"></i>Add Contact
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectCB">
+                <i class="fa-solid fa-book-open"></i>List Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectDelate">
+                <i class="fa-solid fa-trash"></i>Delete Contact
+            </a>
+        </nav>
+    </header>
+
+    <!-- <h1>Programación II</h1>
+        <h2>Libreta de Contactos</h2> -->
+    <h3 class="titulo">Crear libreta de contactos</h3>
+
+    <form action='http://localhost:3000/SaveCB' method="POST">
+        <div>
+            <label for="nombre" class="formulario__label">
+                <span class="target">Name:</span>
+            </label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre"
+                    placeholder="ingrese nombre de la libreta de contacto">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-block btn-primary btn-lg">
+            <i class="fa-regular fa-share-from-square"></i>
+            Save ContactBook and Add Contact
+            <i class="fa-regular fa-share-from-square"></i>
+        </button>
+    </form>
+</body>
+
+</html>

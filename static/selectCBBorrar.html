@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="mensajes/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mensajes/bootstrap5/css/product.css" rel="stylesheet">
+    <link rel="stylesheet" href="mensajes/bootstrap5/css/estilos.css">
+    <script src="https://kit.fontawesome.com/14ae2edc61.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000  ">
+                <abbr title="home"><i class="fa-solid fa-house-user fa-3x"></i></abbr>
+              </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/createContactBook">
+                <i class="fa-solid fa-book"></i>Create Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/addContact">
+                <i class="fa-solid fa-address-book"></i>Add Contact
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectCB">
+                <i class="fa-solid fa-book-open"></i>List Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectDelate">
+                <i class="fa-solid fa-trash"></i>Delete Contact
+            </a>
+        </nav>
+    </header>
+
+    <section class="w-100 p-4 d-flex justify-content-center pb-4">
+        <form action="http://localhost:3000/receiveDelete" method="post" id="form">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="CB" style="margin-left: 0px;">seleccionar libreta de contactos</label>
+                <div class="mb-3">
+                    <select class="form-select form-select-lg mb-3" aria-label="ejemplo de .form-select-lg"
+                        _mstaria-label="563641" name="nameCB" id="CB">
+                        <option name="option" value="option" _msthash="1382719" _msttexthash="390026">seleccionar
+                            contactBook</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- boton de enviar datos-->
+            <div class="col text-center">
+                <button type="submit" formmethod='post' class="btn btn-primary btn-block mb-4">seleccionar</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
