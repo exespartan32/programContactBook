@@ -4,7 +4,9 @@
   "description": "proyecto de programacion 2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "author": "exequiel mayorga",
   "license": "ISC",
