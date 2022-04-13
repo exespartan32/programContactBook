@@ -18,7 +18,7 @@
         <nav class="container d-flex flex-column flex-md-row justify-content-between">
             <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000  ">
                 <abbr title="home"><i class="fa-solid fa-house-user fa-3x"></i></abbr>
-              </a>
+            </a>
             <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/createContactBook">
                 <i class="fa-solid fa-book"></i>Create Contact Book
             </a>
@@ -37,24 +37,25 @@
     <!-- <h1>Programación II</h1>
         <h2>Libreta de Contactos</h2> -->
     <h3 class="titulo">Crear libreta de contactos</h3>
-
-    <form action='http://localhost:3000/SaveCB' method="POST">
-        <div>
-            <label for="nombre" class="formulario__label">
-                <span class="target">Name:</span>
-            </label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="nombre" id="nombre"
-                    placeholder="ingrese nombre de la libreta de contacto">
+    <section class="w-100 p-4 d-flex justify-content-center pb-4">
+        <form action='http://localhost:3000/SaveCB' method="POST">
+            <div>
+                <label for="nombre" class="formulario__label">
+                    <span class="target">Name:</span>
+                </label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre"
+                        placeholder="ingrese nombre de la libreta de contacto">
+                </div>
             </div>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-block btn-primary btn-lg">
-            <i class="fa-regular fa-share-from-square"></i>
-            Save ContactBook and Add Contact
-            <i class="fa-regular fa-share-from-square"></i>
-        </button>
-    </form>
+            <br>
+            <button type="submit" class="btn btn-block btn-primary btn-lg">
+                <i class="fa-regular fa-share-from-square"></i>
+                Save ContactBook and Add Contact
+                <i class="fa-regular fa-share-from-square"></i>
+            </button>
+        </form>
+    </section>
 </body>
 
 </html>

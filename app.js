@@ -98,27 +98,6 @@ function leerContactBook(nombre) {
    // console.log(dataArray)
 
     return dataArray
-    /* 
-        for (i=0;i<dataArray.length;i++) {
-            var name = json_datos.contactos[i].name
-            var ape = json_datos.contactos[i].apellido
-            var mobil = json_datos.contactos[i].mobil
-            var email = json_datos.contactos[i].email
-            var topList = json_datos.contactos[i].topList
-    
-                if(topList==="on"){
-                    topList = "yes"
-                }else{
-                    topList = "no"
-                }
-        } 
-        */
 }
-
-
-
-
-
-
 
 module.exports = { crearCB, sobreescribirContacto, guardarContacto, leerContactBook }

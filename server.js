@@ -107,6 +107,7 @@ app.post('/recibeSelectCB', (request, response) => {
 			
 			var stringC = stringC + '<tr scope="table-info">' +
             '<td>' + array[i].name + '</td>' +
+            '<td>' + array[i].apellido + '</td>' +
             '<td>' + array[i].email + '</td>' +
             '<td>' + array[i].mobil + '</td>' +
             '<td>' + array[i].topList + '</td>' +
@@ -154,23 +155,24 @@ app.post('/receiveDelete', (request, response) => {
 			
 			var stringC = stringC + '<tr scope="table-info">' +
 			'<td><button type="submit" class="btn btn-primary btn-block mb-4">borrar</button></td>'+
-            '<td>' + array[i].name + '</td>' +
-            '<td>' + array[i].email + '</td>' +
-            '<td>' + array[i].mobil + '</td>' +
-            '<td>' + array[i].topList + '</td>' +
+            '<td name="name1" id="nombre">' + array[i].name + '</td>' +
+            '<td name="name2" id="apellido">' + array[i].apellido + '</td>' +
+            '<td name="email" id="email">' + array[i].email + '</td>' +
+            '<td name="mobil" id="mobil">' + array[i].mobil + '</td>' +
+            '<td name="topList" id="topList">' + array[i].topList + '</td>' +
             '</tr>';
         }
         console.log(stringC);
-		let htmlPlusData = html.toString().replace('<tbody id="tabla">', '<tbody>'+stringC+'</tbody>');
+		let htmlPlusData = html.toString().replace('<tbody id="tabla">', '<tbody id="tabla">'+stringC+'</tbody>');
 
         response.send(htmlPlusData);
         console.log(htmlPlusData);
 	});
-})
+});
 
 app.post('/delateContact', (request, response) => {
-	
-})
+	console.log(request.body)
+});
 
 
 app.post('/home', (request, response) => {
