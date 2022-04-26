@@ -36,11 +36,11 @@ app.post('/SaveCB', (request, response) => {
 	//console.log(name)
 
 	if (fs.existsSync("./static/files/contactos" + name + ".json")) {
-		response.sendFile(path.join(__dirname, './static/forms-css-js/CBNoGuardado.html'));
+		response.sendFile(path.join(__dirname, './static/mensajes/CBNoGuardado.html'));
 	} else {
 		console.log("llego el nombre de la libreta y se guardo: ");
 		Clases1.crearCB(name)
-		response.sendFile(path.join(__dirname, './static/forms-css-js/CBGuardado.html'));
+		response.sendFile(path.join(__dirname, './static/mensajes/CBGuardado.html'));
 	}
 });
 

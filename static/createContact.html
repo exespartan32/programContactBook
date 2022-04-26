@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mensajes/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mensajes/bootstrap5/css/estilos.css">
+
+    <link href="mensajes/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mensajes/bootstrap5/css/product.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14ae2edc61.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000  ">
+                <abbr title="home"><i class="fa-solid fa-house-user fa-3x"></i></abbr>
+              </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/createContactBook">
+                <i class="fa-solid fa-book"></i>Create Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/addContact">
+                <i class="fa-solid fa-address-book"></i>Add Contact
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectCB">
+                <i class="fa-solid fa-book-open"></i>List Contact Book
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:3000/selectDelate">
+                <i class="fa-solid fa-trash"></i>Delete Contact
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- <h1 class="titulo">Programación II</h1> 
+        <h2 class="subtitulo">Libreta de Contactos</h2> -->
+    <h3 class="titulo">Agregar nuevo Contacto</h3>
+
+    <section class="w-100 p-4 d-flex justify-content-center pb-4">
+        <form action='http://localhost:3000/SaveContacts' method="POST">
+            <!-- 2 column grid layout with text inputs for the first and last names (number1)-->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" name="name1" id="nombre" class="form-control" placeholder="ingrese nombre">
+                        <label class="form-label" for="nombre" style="margin-left: 0px;">First name</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 column grid layout with text inputs for the first and last names (number2)-->
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" class="form-control" name="name2" id="apellido"
+                            placeholder="ingrese apellido">
+                        <label class="form-label" for="apellido" style="margin-left: 0px;">Last name</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 68px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mobil -->
+            <div class="form-outline mb-4">
+                <input type="number" class="form-control" name="mobil" id="mobil" placeholder="ingrese mobil">
+                <label class="form-label" for="mobil" style="margin-left: 0px;">mobil number</label>
+                <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 88.8px;"></div>
+                    <div class="form-notch-trailing"></div>
+                </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" class="form-control" name="email" id="email" placeholder="ingrese email">
+                <label class="form-label" for="email" style="margin-left: 0px;">Email address</label>
+                <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 88.8px;"></div>
+                    <div class="form-notch-trailing"></div>
+                </div>
+            </div>
+            
+            <!-- boton de enviar datos-->
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary btn-block mb-4">Enviar Datos</button>
+            </div>
+        </form>
+    </section>
+    </div>
+
+</html>

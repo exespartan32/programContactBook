@@ -11,16 +11,35 @@ const tree = dirTree('./static/files/contactos');
 const array = tree.children
 //console.log(tree.children[0].name);
 for (i = 0; i < array.length; i++) {
-    console.log(array[i].name);
+    //console.log(array[i].name);
 }
 
 // ------------------------------------------------------------------------------------------------
 //crea libreta de contacto
 function crearCB(nombre) {
-    fs.createWriteStream("./static/files/contactos" + nombre + ".json")
+    fs.createWriteStream("./static/files/contactos/" + nombre + ".json")
 }
 
 // ------------------------------------------------------------------------------------------------
+//crear contacto
+function CrearContacto(nombre, nuevoContact) {
+    var miContactBook = new Clases.ContactBook("unica libreta", [])
+    miContactBook.addContact(nuevoContact)
+
+    console.log(miContactBook)
+    var data = JSON.stringify(miContactBook)
+
+    console.log(data)
+
+    fs.writeFile("./static/files/contactos/" + nombre + ".json", data, (error) => {
+        if (error) {
+            console.log("no se pudo escribir en el archivo")
+        } else {
+            console.log("escritura exitosa")
+        }
+    })
+}
+
 //sobreescribe el contacto
 function sobreescribirContacto(nombre, nuevoContact) {
     var miContactBook = new Clases.ContactBook("unica libreta", [])
@@ -66,7 +85,7 @@ function guardarContacto(nombre, nuevoC) {
                 var email = json_datos.contactos[i].email
                 var topList = json_datos.contactos[i].topList
 
-                var miContacto = new Clases.Contact(name, mobil, email, topList);
+                var miContacto = new Clases.Contact(nombre,apellido, mobil, email, topList);
                 miContactBook.addContact(miContacto);
             }
             miContactBook.addContact(nuevoC);
